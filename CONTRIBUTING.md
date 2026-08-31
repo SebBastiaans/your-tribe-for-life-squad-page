@@ -6,7 +6,7 @@
 ## Code Conventions
 - Kebab classname structure
 - English
-- Nesting after the top-level elements (<html>, <body>, <header>, <main> en <footer>)
+- Nesting after the top-level elements (`<html>`, `<body>`, `<header>`, `<main>` en `<footer>`)
 - Use progressive enhancement
 - Build the website according to the RAPPE principle.
 
