@@ -1,11 +1,11 @@
 # Agreements on cooperation
 
 ## Teamcanvas
-<img width="800" height="571" alt="image" src="https://github.com/user-attachments/assets/1e26a091-2f37-4003-a482-443a8b26d248" />
+
 
 ## Code Conventions
 - Kebab classname structure
-- English
+- English titles, issue descriptions can be in Dutch
 - Nesting after the top-level elements (`<html>`, `<body>`, `<header>`, `<main>` en `<footer>`)
 - Use progressive enhancement
 - Build the website according to the RAPPE principle.
