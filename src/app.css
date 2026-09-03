@@ -37,7 +37,6 @@ body {
 }
 
 p, a, span, button, summary {
-    font-family: inter, sans-serif;
     font-weight: 400;
     font-size: var(--paragraph-medium);
     color: var(--primary-text-color);
