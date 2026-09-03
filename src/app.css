@@ -10,7 +10,7 @@
     padding: 0;
     line-height: 1.4;
     box-sizing: border-box;
-    font-family: inter;
+    font-family: inter, sans-serif;
     list-style: none;
 }
 
@@ -37,14 +37,11 @@ body {
 }
 
 p, a, span, button, summary {
+    font-family: inter, sans-serif;
     font-weight: 400;
     font-size: var(--paragraph-medium);
     color: var(--primary-text-color);
     text-decoration: none;
-}
-
-h1, h2, h3{
-    font-family: inter, sans-serif;
 }
 
 h1 {
