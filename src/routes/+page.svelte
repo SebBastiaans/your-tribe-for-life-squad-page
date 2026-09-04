@@ -1,2 +1,16 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+    let {data} = $props();
+
+    const persons = data.persons;
+    // const avatar = data.avatar;
+    const mugshot = data.mugshot;
+</script>
+
+<section>
+{#each persons as person}
+    <article>
+        <img src="https://fdnd.directus.app/assets/{person.mugshot}">
+        <p>{person.name}</p>
+    </article>
+{/each}
+</section>
