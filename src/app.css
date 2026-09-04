@@ -34,6 +34,9 @@ body {
     --primary-accent-color: #53fc18;
 
     --active-color: #42474D;
+
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
 }
 
 p, a, span, button, summary {
