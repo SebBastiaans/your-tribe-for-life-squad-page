@@ -1,6 +1,7 @@
 # Agreements on cooperation
 
 ## Teamcanvas
+<img width="742" height="525" alt="image" src="https://github.com/user-attachments/assets/80bf37e1-47e5-43f8-8662-167707526a26" />
 
 
 ## Code Conventions
