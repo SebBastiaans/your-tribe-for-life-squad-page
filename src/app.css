@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'inter';
+    src: url('./lib/assets/fonts/Inter-VariableFont_opsz,wght.ttf');
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+    box-sizing: border-box;
+    font-family: inter, sans-serif;
+    list-style: none;
+}
+
+body {
+    /* font sizes */
+    --heading-small: 1.5rem;
+    --heading-medium: 2rem;
+    --heading-big: 3rem;
+
+    --paragraph-small: .75rem;
+    --paragraph-medium: 1rem;
+    --paragraph-big: 1.125rem;
+
+    /* colors */
+    --primary-background-color: #0b0b0c;
+    --secondary-background-color: #303031;
+
+    --primary-text-color: #ffffff;
+    --secondary-text-color: #9FA6AD;
+
+    --primary-accent-color: #53fc18;
+
+    --active-color: #42474D;
+}
+
+p, a, span, button, summary {
+    font-family: inter, sans-serif;
+    font-weight: 400;
+    font-size: var(--paragraph-medium);
+    color: var(--primary-text-color);
+    text-decoration: none;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: var(--heading-big);
+    line-height: 3.5rem;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: var(--heading-medium);
+    line-height: 2.5rem;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: var(--heading-small);
+    line-height: 2rem;
+}
+
+:focus-visible{
+    outline: 2px solid var(--primary-accent-color);
+}
