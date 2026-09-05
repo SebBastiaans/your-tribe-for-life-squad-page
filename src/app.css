@@ -15,14 +15,14 @@
 }
 
 body {
-    /* font sizes */
-    --heading-small: 1.5rem;
-    --heading-medium: 2rem;
-    --heading-big: 3rem;
+    /* font sizes, fluid between 320px and 1280px viewport width */
+    --heading-small: clamp(1.25rem, 1.167rem + 0.417vw, 1.5rem);
+    --heading-medium: clamp(1.5rem, 1.333rem + 0.833vw, 2rem);
+    --heading-big: clamp(2rem, 1.667rem + 1.667vw, 3rem);
 
-    --paragraph-small: .75rem;
+    --paragraph-small: 0.75rem;
     --paragraph-medium: 1rem;
-    --paragraph-big: 1.125rem;
+    --paragraph-big: clamp(1rem, 0.958rem + 0.208vw, 1.125rem);
 
     /* colors */
     --primary-background-color: #0b0b0c;
