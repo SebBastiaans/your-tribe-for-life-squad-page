@@ -26,7 +26,7 @@ body {
 
     /* colors */
     --primary-background-color: #0b0b0c;
-    --secondary-background-color: #303031;
+    --secondary-background-color: #3A3D43;
 
     --primary-text-color: #ffffff;
     --secondary-text-color: #9FA6AD;
@@ -34,6 +34,12 @@ body {
     --primary-accent-color: #53fc18;
 
     --active-color: #42474D;
+
+    /* spacing */
+
+    --margin-inline: clamp(1rem, 0.333rem + 3.333vw, 3rem);
+    --radius-small: .25rem;
+    --radius-round: 999rem;
 
     background-color: var(--primary-background-color);
     color: var(--primary-text-color);
@@ -47,22 +53,23 @@ p, a, span, button, summary {
     text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 h1 {
     font-weight: 700;
     font-size: var(--heading-big);
-    line-height: 3.5rem;
 }
 
 h2 {
     font-weight: 700;
     font-size: var(--heading-medium);
-    line-height: 2.5rem;
 }
 
 h3 {
     font-weight: 600;
     font-size: var(--heading-small);
-    line-height: 2rem;
 }
 
 :focus-visible{
