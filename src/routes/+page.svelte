@@ -24,9 +24,15 @@
     }
     
     section {
+        display: flex;
+        gap: 1em;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+
         article {
             position: relative;
             width: fit-content;
+            flex: 0 0 175px;
 
             img {
                 max-width: 100%;
