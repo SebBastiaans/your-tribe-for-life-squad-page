@@ -26,6 +26,7 @@
     section {
         display: flex;
         gap: 1em;
+        margin: 1em;
         overflow-x: auto;
         scroll-behavior: smooth;
 
@@ -38,6 +39,7 @@
                 max-width: 100%;
                 height: auto;
                 display: block;
+                border-radius: 12px;
             }
 
             > div {
@@ -75,6 +77,7 @@
                 bottom: 0;
                 right: 0;
                 left: 0;
+                border-radius: 0 0 12px 12px;
             }
         }
     }
