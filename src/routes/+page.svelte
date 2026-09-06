@@ -19,22 +19,33 @@
 </section>
 
 <style>
+    * {
+        box-sizing: border-box;
+    }
+    
     section {
         article {
+            position: relative;
+            width: fit-content;
+
             img {
                 max-width: 100%;
                 height: auto;
+                display: block;
             }
 
-            div {
+            > div {
                 display: flex;
                 align-items: center;
+                position: absolute;
                 gap: .3em;
                 width: fit-content;
                 padding-inline: 6px;
                 padding-block: 4px;
                 border-radius: 99px;
                 background: black;
+                top: .5em;
+                left: .5em;
 
                 div:nth-of-type(1) {
                     background: #53FC18;
@@ -51,8 +62,13 @@
             }
 
             p {
+                position: absolute;
                 background: rgb(0 0 0 / 70%);
+                text-align: center;
                 font-size: 20px;
+                bottom: 0;
+                right: 0;
+                left: 0;
             }
         }
     }
