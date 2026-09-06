@@ -49,6 +49,11 @@
                     font-size: 14px;
                 }
             }
+
+            p {
+                background: rgb(0 0 0 / 70%);
+                font-size: 20px;
+            }
         }
     }
 </style>
