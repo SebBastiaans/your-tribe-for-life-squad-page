@@ -1,16 +1,8 @@
 <script>
-    let {data} = $props();
-
-    const persons = data.persons;
-    // const avatar = data.avatar;
-    const mugshot = data.mugshot;
+    let { data } = $props();
+    const persons = data.person;
 </script>
 
-<section>
 {#each persons as person}
-    <article>
-        <img src="https://fdnd.directus.app/assets/{person.mugshot}">
-        <p>{person.name}</p>
-    </article>
+    <a href="/detail/{person.id}">{person.name}</a><br>
 {/each}
-</section>
