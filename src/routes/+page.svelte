@@ -7,7 +7,7 @@
 <section>
 {#each persons as person}
     <article>
-        <img src="https://fdnd.directus.app/assets/{person.mugshot}" width="175px" height="125px">
+        <img src="https://fdnd.directus.app/assets/{person.mugshot}" width="175" height="125" alt="Mugshot van {person.name}">
         <div>
             <div></div>
             <span>Live</span>
