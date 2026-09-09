@@ -2,7 +2,6 @@
     let {data} = $props();
 
     const persons = data.persons;
-    const mugshot = data.mugshot;
 </script>
 
 <section>
