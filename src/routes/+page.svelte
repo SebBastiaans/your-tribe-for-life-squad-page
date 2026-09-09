@@ -55,7 +55,7 @@
                 left: .5em;
 
                 div:nth-of-type(1) {
-                    background: #53FC18;
+                    background: var(--primary-accent-color);
                     border-radius: 50%;
                     width: 8px;
                     height: 8px;
@@ -63,7 +63,8 @@
                 }
 
                 span {
-                    color: white;
+                    color: var(--primary-text-color);
+                    font-family: 'inter';
                     font-size: 14px;
                 }
             }
@@ -71,7 +72,8 @@
             h2 {
                 position: absolute;
                 background: rgb(0 0 0 / 70%);
-                color: white;
+                color: var(--primary-text-color);
+                font-family: 'inter';
                 font-weight: 500;
                 text-align: center;
                 font-size: 20px;
