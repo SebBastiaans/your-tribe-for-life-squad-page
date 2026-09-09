@@ -1,13 +1,19 @@
 <script>
     let {data} = $props();
 
+    import shrek from '$lib/assets/Shrek.webp';
+
     const persons = data.persons;
 </script>
 
 <section>
 {#each persons as person}
     <article>
+    {#if person.mugshot}
         <img src="https://fdnd.directus.app/assets/{person.mugshot}" width="175" height="125" alt="Mugshot van {person.name}">
+    {:else}
+        <img src="{shrek}" width="175" height="125" alt="Mugshot van Shrek">
+    {/if}
         <div>
             <div></div>
             <span>Live</span>
