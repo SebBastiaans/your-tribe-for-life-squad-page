@@ -12,7 +12,7 @@
             <div></div>
             <span>Live</span>
         </div>
-        <p>{person.name}</p>
+        <h2>{person.name}</h2>
     </article>
 {/each}
 </section>
@@ -68,9 +68,11 @@
                 }
             }
 
-            p {
+            h2 {
                 position: absolute;
                 background: rgb(0 0 0 / 70%);
+                color: white;
+                font-weight: 500;
                 text-align: center;
                 font-size: 20px;
                 bottom: 0;
