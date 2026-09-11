@@ -6,6 +6,7 @@
     const persons = data.persons;
 </script>
 
+<section>
 {#each persons as person}
     <article>
     {#if person.mugshot}
@@ -13,10 +14,7 @@
     {:else}
         <img src="{shrek}" width="225" height="175" alt="Mugshot van Shrek">
     {/if}
-        <div>
-            <div></div>
-            <span>Live</span>
-        </div>
+        <p>Live</p>
         <h2>{person.name}</h2>
     </article>
 {/each}
@@ -42,7 +40,7 @@
                 border-radius: 12px;
             }
 
-            > div {
+            > p {
                 display: flex;
                 align-items: center;
                 position: absolute;
@@ -54,13 +52,15 @@
                 background: black;
                 top: .5em;
                 left: .5em;
+                font-size: 14px;
 
-                div:nth-of-type(1) {
-                    background: var(--primary-accent-color);
-                    border-radius: 50%;
+                &:before {
+                    content: '';
+                    display: block;
                     width: 8px;
                     height: 8px;
-                    padding: 0;
+                    background-color: var(--primary-accent-color);
+                    border-radius: 50%;
                 }
 
                 span {
