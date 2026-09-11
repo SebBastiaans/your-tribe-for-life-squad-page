@@ -5,7 +5,7 @@
 
 ## Code Conventions
 - Kebab classname structure
-- English titles, issue descriptions can be in Dutch
+- issues can be in either English or Dutch
 - Nesting after the top-level elements (`<html>`, `<body>`, `<header>`, `<main>` en `<footer>`)
 - Use progressive enhancement
 - Build the website according to the RAPPE principle.

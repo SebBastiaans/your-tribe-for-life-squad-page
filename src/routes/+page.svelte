@@ -6,7 +6,6 @@
     const persons = data.persons;
 </script>
 
-<section>
 {#each persons as person}
     <article>
     {#if person.mugshot}
