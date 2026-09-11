@@ -24,10 +24,6 @@
 </section>
 
 <style>
-    * {
-        box-sizing: border-box;
-    }
-    
     section {
         display: flex;
         gap: 1em;
