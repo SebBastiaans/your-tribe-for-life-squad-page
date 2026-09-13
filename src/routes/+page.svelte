@@ -7,35 +7,53 @@
 </script>
 
 <section>
-{#each persons as person}
-    <article>
-    {#if person.mugshot}
-        <img src="https://fdnd.directus.app/assets/{person.mugshot}" width="225" height="175" alt="Mugshot van {person.name}">
-    {:else}
-        <img src="{shrek}" width="225" height="175" alt="Mugshot van Shrek">
-    {/if}
-        <p>Live</p>
-        <h2>{person.name}</h2>
-    </article>
-{/each}
+    {#each persons as person}
+        <a href={`/detail/${person.id}`}>
+            <article>
+            {#if person.mugshot}
+                <img src="https://fdnd.directus.app/assets/{person.mugshot}" width="225" height="175" alt="Mugshot van {person.name}">
+            {:else}
+                <img src="{shrek}" width="225" height="175" alt="Mugshot van Shrek">
+            {/if}
+                <p>Live</p>
+                <h2>{person.name}</h2>
+            </article>
+        </a>
+    {/each}
 </section>
 
 <style>
     section {
         display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
         gap: 1em;
-        margin: 1em;
+        /* margin: 1em; */
         overflow-x: auto;
         scroll-behavior: smooth;
+        background-color: var(--secondary-text-color);
+        padding: 1rem;
+
+        a {
+            display: block;
+            /* width: 175px; */
+            flex: 0 0 175px;
+            color: inherit;
+            text-decoration: none;
+        }
 
         article {
             position: relative;
-            width: fit-content;
+            width: 100%;
             flex: 0 0 175px;
+            margin-block-start: 1rem;
 
             img {
-                max-width: 100%;
-                height: auto;
+                width: 100%;
+                height: 100px;
+                object-fit: cover;
                 display: block;
                 border-radius: 12px;
             }
@@ -48,7 +66,7 @@
                 width: fit-content;
                 padding-inline: 6px;
                 padding-block: 4px;
-                border-radius: 99px;
+                border-radius: var(--radius-round);
                 background: black;
                 top: .5em;
                 left: .5em;
@@ -63,11 +81,11 @@
                     border-radius: 50%;
                 }
 
-                span {
+                /* span {
                     color: var(--primary-text-color);
                     font-family: 'inter';
                     font-size: 14px;
-                }
+                } */
             }
 
             h2 {
@@ -82,6 +100,9 @@
                 right: 0;
                 left: 0;
                 border-radius: 0 0 12px 12px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
         }
     }
