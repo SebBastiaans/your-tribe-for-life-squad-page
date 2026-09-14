@@ -3,6 +3,7 @@
   import profilePicture from './assets/profilePicture.jpg';
   import follow from '$lib/assets/follow.svg';
   import subscribe from '$lib/assets/subscribe.svg';
+  import furkan from '$lib/assets/furkan.png';
 //   import load from '../routes/detail/[id]/+page.server'
 
   let { person, squad = null } = $props();
@@ -17,16 +18,18 @@
       src={`https://fdnd.directus.app/assets/${person.mugshot}`}
       alt={`Mugshot van ${person.name}`}
     />
+    {:else}
+      <img class="mugshot" src="{profilePicture}" alt="Profile picture">
   {/if}
 
   <section>
     {#if person.avatar}
       <a class="avatar" href={person.website}>
-        <img src={person.avatar} alt="Profile picture van {person.name}" />
+        <img src="{person.avatar}" alt="Profile picture van {person.name}" />
       </a>
     {:else}
       <a class="avatar" href={person.website}>
-        <img src={profilePicture} alt="Profile picture" />
+        <img class="avatar" src="{furkan}" alt="Profile picture" />
       </a>
     {/if}
 
@@ -132,7 +135,7 @@
     bottom: 20vh; */
     flex-direction: column;
     align-items: center;
-    padding-bottom: 23vh;
+    padding-bottom: 13rem;
 
     .mugshot {
       width: 100%;

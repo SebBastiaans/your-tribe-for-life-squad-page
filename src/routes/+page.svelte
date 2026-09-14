@@ -82,7 +82,7 @@
 
       img {
         width: 100%;
-        height: 100px;
+        height: 8.125rem;
         object-fit: cover;
         display: block;
         border-radius: 12px;
