@@ -128,8 +128,11 @@
 
   main {
     display: flex;
+    /* position: absolute;
+    bottom: 20vh; */
     flex-direction: column;
     align-items: center;
+    padding-bottom: 23vh;
 
     .mugshot {
       width: 100%;

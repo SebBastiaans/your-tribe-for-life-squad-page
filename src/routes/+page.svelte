@@ -6,7 +6,7 @@
 
   const persons = data.persons
   const squad = data.squad
-  
+
   let chosenPerson = $state(null)
 
   async function choosePerson(id) {
@@ -59,8 +59,9 @@
     /* margin: 1em; */
     overflow-x: auto;
     scroll-behavior: smooth;
-    background-color: #181a1f;
+    background-color: var(--primary-background-color);
     padding: 1rem;
+    border-top: 1px solid var(--secondary-background-color);
 
     > button {
       display: block;
