@@ -8,7 +8,7 @@
   let { person } = $props();
 </script>
 
-<div class="person-detail">
+<div class="person-detail" style="view-transition-name: person-card-{person.id}">
   {#if person.mugshot}
     <img
       class="mugshot"

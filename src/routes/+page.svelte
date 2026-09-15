@@ -15,7 +15,13 @@
 
     const result = await response.json()
 
-    chosenPerson = result.data
+    if (document.startViewTransition) {
+      document.startViewTransition(() => {
+        chosenPerson = result.data
+      })
+    } else {
+      chosenPerson = result.data
+    }
   }
 </script>
 
@@ -33,7 +39,10 @@
 
 <section class="person-list">
   {#each persons as person}
-    <button on:click={() => choosePerson(person.id)}>
+    <button
+      on:click={() => choosePerson(person.id)}
+      style={chosenPerson?.id === person.id ? '' : `view-transition-name: person-card-${person.id}`}
+    >
       <article>
         {#if person.mugshot}
           <img
