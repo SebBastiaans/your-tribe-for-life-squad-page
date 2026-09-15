@@ -4,7 +4,6 @@
   import follow from '$lib/assets/follow.svg';
   import subscribe from '$lib/assets/subscribe.svg';
   import furkan from '$lib/assets/furkan.png';
-//   import load from '../routes/detail/[id]/+page.server'
 
   let { person, squad = null } = $props();
 </script>
@@ -79,7 +78,7 @@
       </li>
 
       <li>
-        <button type="button">
+        <button type="button" aria-label="Subscribe">
           <img src={subscribe} alt="" />
           <span>Subscribe</span>
         </button>
@@ -131,8 +130,6 @@
 
   .person-detail {
     display: flex;
-    /* position: absolute;
-    bottom: 20vh; */
     flex-direction: column;
     align-items: center;
     padding-bottom: 13rem;
