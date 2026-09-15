@@ -20,6 +20,10 @@
   }
 </script>
 
+<svelte:head>
+  <title>Squadpage 2G</title>
+</svelte:head>
+
 <main>
   {#if chosenPerson}
     <PersonDetail person={chosenPerson} squad={data.squad} />
