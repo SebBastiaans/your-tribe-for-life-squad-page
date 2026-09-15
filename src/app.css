@@ -80,3 +80,7 @@ h3 {
 ::view-transition-new(*) {
     animation-duration: 0.4s;
 }
+
+::view-transition-group(person-list) {
+    z-index: 10;
+}

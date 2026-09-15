@@ -68,6 +68,7 @@
     left: 0;
     right: 0;
     gap: 1em;
+    view-transition-name: person-list;
     /* margin: 1em; */
     overflow-x: auto;
     scroll-behavior: smooth;
