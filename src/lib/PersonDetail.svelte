@@ -176,6 +176,11 @@
           border-radius: var(--radius-round);
           outline: 3px solid var(--primary-accent-color);
         }
+
+        &:hover{
+          scale: 1.1;
+          transition: .1s ease;
+        }
       }
 
       .username {
