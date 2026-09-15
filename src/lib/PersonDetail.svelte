@@ -311,6 +311,8 @@
 
       p:nth-of-type(2) {
         grid-area: info;
+        overflow: hidden;
+        contain: layout paint;
       }
 
       details {
