@@ -21,7 +21,7 @@
       <img class="mugshot" src="{profilePicture}" alt="Profile picture">
   {/if}
 
-  <section>
+  <section aria-label="About {person.name}">
     {#if person.avatar}
       <a class="avatar" href={person.website}>
         <img src="{person.avatar}" alt="Profile picture van {person.name}" />
@@ -86,7 +86,7 @@
     </ul>
   </section>
 
-  <section>
+  <section aria-label="Description by {person.name}">
     {#if person.github_handle}
       <h3>
         About {person.github_handle}
