@@ -5,7 +5,6 @@
   let { data } = $props()
 
   const persons = data.persons
-  const squad = data.squad
 
   let chosenPerson = $state(null)
 
@@ -26,7 +25,7 @@
 
 <main>
   {#if chosenPerson}
-    <PersonDetail person={chosenPerson} squad={data.squad} />
+    <PersonDetail person={chosenPerson} />
   {:else}
     <p>Nog niet op een persoon geklikt</p>
   {/if}

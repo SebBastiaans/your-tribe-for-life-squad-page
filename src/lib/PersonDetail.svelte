@@ -5,10 +5,8 @@
   import subscribe from '$lib/assets/subscribe.svg';
   import furkan from '$lib/assets/furkan.png';
 
-  let { person, squad = null } = $props();
+  let { person } = $props();
 </script>
-
-<h1>Squadpage {squad?.name || ''}</h1>
 
 <div class="person-detail">
   {#if person.mugshot}
@@ -124,10 +122,6 @@
 </div>
 
 <style>
-  h1 {
-    padding: 1rem;
-  }
-
   .person-detail {
     display: flex;
     flex-direction: column;

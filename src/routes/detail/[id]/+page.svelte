@@ -7,7 +7,6 @@
   let { data } = $props()
 
   const person = data.person
-  const squad = data.squad
 
   let chosenPerson = $state(null)
 
@@ -23,8 +22,6 @@
     chosenPerson = data.data
   }
 </script>
-
-<h1>Squadpage {squad.name}</h1>
 
 <main>
   <img
@@ -111,10 +108,6 @@
 </main>
 
 <style>
-  h1 {
-    padding: 1rem;
-  }
-
   main {
     display: flex;
     flex-direction: column;
