@@ -185,7 +185,7 @@
       top: 0;
       inset: auto;
       grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));      
-      grid-auto-rows: 110px;
+      grid-auto-rows: 125px;
       align-content: start;
       gap: 14px;
       height: 100dvh;
@@ -204,8 +204,8 @@
     grid-template-columns: 300px minmax(100px, 1fr);
   }
 
-  @media (min-width:800px) {
+  /* @media (min-width:800px) {
     grid-template-columns: 400px minmax(50px, 1fr);
-  }
+  } */
 }
 </style>
