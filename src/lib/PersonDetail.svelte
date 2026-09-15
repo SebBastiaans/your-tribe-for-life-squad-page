@@ -18,7 +18,7 @@
       alt={`Mugshot van ${person.name}`}
     />
     {:else}
-      <img class="mugshot" src="{profilePicture}" alt="Profile picture">
+      <img class="mugshot" src="{profilePicture}" alt="Standard profile picture">
   {/if}
 
   <section aria-label="About {person.name}">
@@ -28,7 +28,7 @@
       </a>
     {:else}
       <a class="avatar" href={person.website}>
-        <img class="avatar" src="{furkan}" alt="Profile picture" />
+        <img class="avatar" src="{furkan}" alt="Standard profile picture" />
       </a>
     {/if}
 
