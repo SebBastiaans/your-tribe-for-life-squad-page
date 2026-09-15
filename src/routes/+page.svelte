@@ -5,7 +5,6 @@
   let { data } = $props()
 
   const persons = data.persons
-  const squad = data.squad
 
   let chosenPerson = $state(null)
 
@@ -16,13 +15,23 @@
 
     const result = await response.json()
 
-    chosenPerson = result.data
+    if (document.startViewTransition) {
+      document.startViewTransition(() => {
+        chosenPerson = result.data
+      })
+    } else {
+      chosenPerson = result.data
+    }
   }
 </script>
 
+<svelte:head>
+  <title>Squadpage 2G</title>
+</svelte:head>
+
 <main>
   {#if chosenPerson}
-    <PersonDetail person={chosenPerson} squad={data.squad} />
+    <PersonDetail person={chosenPerson} />
   {:else}
     <p>Nog niet op een persoon geklikt</p>
   {/if}
@@ -30,7 +39,10 @@
 
 <section class="person-list">
   {#each persons as person}
-    <button on:click={() => choosePerson(person.id)}>
+    <button
+      on:click={() => choosePerson(person.id)}
+      style={chosenPerson?.id === person.id ? '' : `view-transition-name: person-card-${person.id}`}
+    >
       <article>
         {#if person.mugshot}
           <img
@@ -56,6 +68,7 @@
     left: 0;
     right: 0;
     gap: 1em;
+    view-transition-name: person-list;
     /* margin: 1em; */
     overflow-x: auto;
     scroll-behavior: smooth;

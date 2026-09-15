@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'inter';
-    src: url('./lib/assets/fonts/Inter-VariableFont_opsz,wght.ttf');
+    src: url('./lib/assets/fonts/Inter-VariableFont_opsz,wght.woff2') format('woff2-variations');
     font-weight: 100 900;
     font-display: swap;
 }
@@ -74,4 +74,13 @@ h3 {
 
 :focus-visible{
     outline: 2px solid var(--primary-accent-color);
+}
+
+::view-transition-old(*),
+::view-transition-new(*) {
+    animation-duration: 0.4s;
+}
+
+::view-transition-group(person-list) {
+    z-index: 10;
 }
