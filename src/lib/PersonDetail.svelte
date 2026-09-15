@@ -11,7 +11,7 @@
 
 <h1>Squadpage {squad?.name || ''}</h1>
 
-<main>
+<div class="person-detail">
   {#if person.mugshot}
     <img
       class="mugshot"
@@ -122,14 +122,14 @@
       </ul>
     </details>
   </section>
-</main>
+</div>
 
 <style>
   h1 {
     padding: 1rem;
   }
 
-  main {
+  .person-detail {
     display: flex;
     /* position: absolute;
     bottom: 20vh; */
