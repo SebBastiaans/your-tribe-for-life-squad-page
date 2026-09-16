@@ -134,8 +134,8 @@
 
     .mugshot {
       width: 100%;
-      max-width: 80rem;
-      max-height: 40rem;
+      max-width: 60rem;
+      max-height: 35rem;
       object-fit: cover;
     }
 
