@@ -29,14 +29,14 @@
   <title>Squadpage 2G</title>
 </svelte:head>
 
-<div class="squad-layout">
-  <section class="detail-page">
+<main class="squad-layout">
+  <div class="detail-page">
     {#if chosenPerson}
       <PersonDetail person={chosenPerson}/>
     {:else}
       <h3>Klik op een persoon</h3>
     {/if}
-  </section>
+  </div>
 
   <section class="person-list">
     {#each persons as person}
@@ -57,7 +57,7 @@
       </button>
     {/each}
   </section>
-</div>
+</main>
 
 <style>
 .squad-layout {
