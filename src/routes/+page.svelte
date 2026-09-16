@@ -32,7 +32,7 @@
 <div class="squad-layout">
   <section class="detail-page">
     {#if chosenPerson}
-      <PersonDetail person={chosenPerson} {squad} />
+      <PersonDetail person={chosenPerson}/>
     {:else}
       <p>Nog niet op een persoon geklikt</p>
     {/if}
