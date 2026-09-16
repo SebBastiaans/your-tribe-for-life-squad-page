@@ -113,6 +113,7 @@
 
       &:hover img {
         border-radius: 6px;
+        scale: 1.025;
 
         @media (min-width:700px) {
           border-radius: 4px;
