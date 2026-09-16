@@ -34,7 +34,7 @@
     {#if chosenPerson}
       <PersonDetail person={chosenPerson}/>
     {:else}
-      <h3>Nog niet op een persoon geklikt</h3>
+      <h3>Klik op een persoon</h3>
     {/if}
   </section>
 
@@ -65,7 +65,11 @@
 
   .detail-page {
     min-width: 0;
-    /* padding-bottom: 13rem; */
+
+    h3{
+      text-align: center;
+      padding-top: 10rem;
+    }
 
     @media (min-width: 700px) {
       grid-area: details;
