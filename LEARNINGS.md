@@ -38,11 +38,11 @@
 
 **- Hoe heb je mij als teamlid ervaren?**
 
-  Emre:
+  Emre: Fijn in de omgang, komt met ideeën. Bij remote werken een beetje afwezig. 
   
-  Semih:
+  Semih: 
   
-  Seb:
+  Seb: Semih: Altijd bereikbaar, enthousiast. Emre: Fijn in de omgang, komt met ideeën. Bij remote werken een beetje afwezig. 
   
 **- Welke tips heb je voor mij?**
 
@@ -50,7 +50,7 @@
   
   Semih:
   
-  Seb:
+  Seb: Semih: Denk eerst goed uit hoe je iets gaat opzetten, voordat je het uitvoert. Emre: Misschien wat meer tijd aan school besteden.
   
 **- Wat zou ik moeten veranderen om prettiger samen te werken?**
 
@@ -58,7 +58,7 @@
   
   Semih:
   
-  Seb:
+  Seb: Semih: Meer documenteren. Emre: Meer online aanwezig zijn.
   
 **- Waar ben je trots op?**
 
@@ -66,4 +66,4 @@
   
   Semih:
   
-  Seb:
+  Seb: Ik ben trots op het feit dat we SvelteKit zijn gaan leren kennen, en we regelmatig besproken hebben hoe dit werkt. 
