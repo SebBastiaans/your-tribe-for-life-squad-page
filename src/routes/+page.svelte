@@ -5,7 +5,6 @@
   let { data } = $props()
 
   const persons = data.persons
-  const squad = data.squad
 
   let chosenPerson = $state(null)
 
@@ -16,7 +15,13 @@
 
     const result = await response.json()
 
-    chosenPerson = result.data
+    if (document.startViewTransition) {
+      document.startViewTransition(() => {
+        chosenPerson = result.data
+      })
+    } else {
+      chosenPerson = result.data
+    }
   }
 </script>
 
@@ -67,6 +72,12 @@
   .person-list {
     display: flex;
     position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    gap: 1em;
+    view-transition-name: person-list;
+    /* margin: 1em; */
     inset: auto 0 0 0;
     gap: 1rem;
     overflow-x: auto;

@@ -4,14 +4,11 @@
   import follow from '$lib/assets/follow.svg';
   import subscribe from '$lib/assets/subscribe.svg';
   import furkan from '$lib/assets/furkan.png';
-//   import load from '../routes/detail/[id]/+page.server'
 
-  let { person, squad = null } = $props();
+  let { person } = $props();
 </script>
 
-<h1>Squadpage {squad?.name || ''}</h1>
-
-<main>
+<div class="person-detail" style="view-transition-name: person-card-{person.id}">
   {#if person.mugshot}
     <img
       class="mugshot"
@@ -19,17 +16,17 @@
       alt={`Mugshot van ${person.name}`}
     />
     {:else}
-      <img class="mugshot" src="{profilePicture}" alt="Profile picture">
+      <img class="mugshot" src="{profilePicture}" alt="Standard profile picture">
   {/if}
 
-  <section>
+  <section aria-label="About {person.name}">
     {#if person.avatar}
       <a class="avatar" href={person.website}>
         <img src="{person.avatar}" alt="Profile picture van {person.name}" />
       </a>
     {:else}
       <a class="avatar" href={person.website}>
-        <img class="avatar" src="{furkan}" alt="Profile picture" />
+        <img class="avatar" src="{furkan}" alt="Standard profile picture" />
       </a>
     {/if}
 
@@ -79,7 +76,7 @@
       </li>
 
       <li>
-        <button type="button">
+        <button type="button" aria-label="Subscribe">
           <img src={subscribe} alt="" />
           <span>Subscribe</span>
         </button>
@@ -87,7 +84,7 @@
     </ul>
   </section>
 
-  <section>
+  <section aria-label="Description by {person.name}">
     {#if person.github_handle}
       <h3>
         About {person.github_handle}
@@ -122,17 +119,11 @@
       </ul>
     </details>
   </section>
-</main>
+</div>
 
 <style>
-  h1 {
-    padding: 1rem;
-  }
-
-  main {
+  .person-detail {
     display: flex;
-    /* position: absolute;
-    bottom: 20vh; */
     flex-direction: column;
     align-items: center;
     padding-bottom: 10rem;
@@ -182,6 +173,11 @@
           object-fit: cover;
           border-radius: var(--radius-round);
           outline: 3px solid var(--primary-accent-color);
+        }
+
+        &:hover{
+          scale: 1.1;
+          transition: .1s ease;
         }
       }
 
@@ -319,6 +315,8 @@
 
       p:nth-of-type(2) {
         grid-area: info;
+        overflow: hidden;
+        contain: layout paint;
       }
 
       details {
