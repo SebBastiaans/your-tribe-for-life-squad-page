@@ -176,7 +176,7 @@
         }
 
         &:hover{
-          scale: 1.1;
+          scale: .95;
           transition: .1s ease;
         }
       }
@@ -255,6 +255,12 @@
 
           @media (width > 1023px) {
             padding: 8px 12px;
+          }
+
+          &:hover{
+            scale: .95;
+            transition: .1s ease;
+            text-decoration: none;
           }
         }
 
