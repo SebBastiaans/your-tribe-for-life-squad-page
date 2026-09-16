@@ -1,6 +1,6 @@
 <script>
   import kickVerified from '$lib/assets/kickVerified.svg';
-  import profilePicture from './assets/profilePicture.jpg';
+  import profilePicture from '$lib/assets/profilePicture.jpg';
   import follow from '$lib/assets/follow.svg';
   import subscribe from '$lib/assets/subscribe.svg';
   import furkan from '$lib/assets/furkan.png';
@@ -135,7 +135,11 @@
     bottom: 20vh; */
     flex-direction: column;
     align-items: center;
-    padding-bottom: 13rem;
+    padding-bottom: 10rem;
+
+    @media (min-width:700px) {
+      padding-bottom: 1rem;
+    }
 
     .mugshot {
       width: 100%;
