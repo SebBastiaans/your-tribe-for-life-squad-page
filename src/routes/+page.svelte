@@ -34,7 +34,7 @@
     {#if chosenPerson}
       <PersonDetail person={chosenPerson}/>
     {:else}
-      <p>Nog niet op een persoon geklikt</p>
+      <h3>Nog niet op een persoon geklikt</h3>
     {/if}
   </section>
 
