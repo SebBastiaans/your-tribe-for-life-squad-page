@@ -21,31 +21,31 @@
 
   <section aria-label="About {person.name}">
     {#if person.avatar}
-      <a class="avatar" href={person.website}>
+      <a class="avatar" href={person.profilecard}>
         <img src="{person.avatar}" alt="Profile picture van {person.name}" />
       </a>
     {:else}
-      <a class="avatar" href={person.website}>
+      <a class="avatar" href={person.profilecard}>
         <img class="avatar" src="{furkan}" alt="Standard profile picture" />
       </a>
     {/if}
 
     {#if person.github_handle}
-      <a class="username" href={person.website}>
+      <a class="username" href={person.profilecard}>
         <h2>
           {person.github_handle}
           <img src={kickVerified} alt="Verified" />
         </h2>
       </a>
     {:else if person.nickname}
-      <a class="username" href={person.website}>
+      <a class="username" href={person.profilecard}>
         <h2>
           {person.nickname}
           <img src={kickVerified} alt="Verified" />
         </h2>
       </a>
     {:else}
-      <a class="username" href={person.website}>
+      <a class="username" href={person.profilecard}>
         <h2>
           {person.name}
           <img src={kickVerified} alt="Verified" />
@@ -69,17 +69,17 @@
 
     <ul>
       <li>
-        <button type="button">
+        <a href={person.website}>
           <img src={follow} alt="" />
           Follow
-        </button>
+        </a>
       </li>
 
       <li>
-        <button type="button" aria-label="Subscribe">
+        <a href={person.website} aria-label="Subscribe">
           <img src={subscribe} alt="" />
           <span>Subscribe</span>
-        </button>
+        </a>
       </li>
     </ul>
   </section>
@@ -176,7 +176,7 @@
         }
 
         &:hover{
-          scale: 1.1;
+          scale: .95;
           transition: .1s ease;
         }
       }
@@ -244,7 +244,7 @@
           width: 100%;
         }
 
-        button {
+        a {
           display: flex;
           align-items: center;
           gap: 0.5rem;
@@ -256,16 +256,22 @@
           @media (width > 1023px) {
             padding: 8px 12px;
           }
+
+          &:hover{
+            scale: .95;
+            transition: .1s ease;
+            text-decoration: none;
+          }
         }
 
-        li:first-of-type button {
+        li:first-of-type a {
           width: 100%;
           justify-content: center;
           color: var(--primary-background-color);
           background-color: var(--primary-accent-color);
         }
 
-        li:nth-of-type(2) button {
+        li:nth-of-type(2) a {
           background-color: var(--secondary-background-color);
 
           span {

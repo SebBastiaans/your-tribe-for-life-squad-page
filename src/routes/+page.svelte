@@ -25,18 +25,25 @@
   }
 </script>
 
-<div class="squad-layout">
-  <section class="detail-page">
+<svelte:head>
+  <title>Squadpage 2G</title>
+</svelte:head>
+
+<main class="squad-layout">
+  <div class="detail-page">
     {#if chosenPerson}
-      <PersonDetail person={chosenPerson} {squad} />
+      <PersonDetail person={chosenPerson}/>
     {:else}
-      <p>Nog niet op een persoon geklikt</p>
+      <h3>Klik op een persoon</h3>
     {/if}
-  </section>
+  </div>
 
   <section class="person-list">
     {#each persons as person}
-      <button onclick={() => choosePerson(person.id)}>
+      <button 
+        onclick={() => choosePerson(person.id)}
+        style={chosenPerson?.id === person.id ? '' : `view-transition-name: person-card-${person.id}`}
+        >
         <article>
           {#if person.mugshot}
             <img
@@ -53,7 +60,7 @@
       </button>
     {/each}
   </section>
-</div>
+</main>
 
 <style>
 .squad-layout {
@@ -61,7 +68,11 @@
 
   .detail-page {
     min-width: 0;
-    /* padding-bottom: 13rem; */
+
+    h3{
+      text-align: center;
+      padding-top: 10rem;
+    }
 
     @media (min-width: 700px) {
       grid-area: details;
@@ -72,12 +83,7 @@
   .person-list {
     display: flex;
     position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    gap: 1em;
     view-transition-name: person-list;
-    /* margin: 1em; */
     inset: auto 0 0 0;
     gap: 1rem;
     overflow-x: auto;
@@ -104,6 +110,14 @@
         height: 100%;
         flex: none;
       }
+
+      &:hover img {
+        border-radius: 6px;
+
+        @media (min-width:700px) {
+          border-radius: 4px;
+        }
+      }
     }
 
     article {
@@ -118,6 +132,7 @@
         height: 7.125rem;
         object-fit: cover;
         border-radius: 12px;
+        transition: border-radius .2s ease-in-out;
 
         @media (min-width:700px) {
           height: 100%;
