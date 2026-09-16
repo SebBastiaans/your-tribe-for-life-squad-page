@@ -40,7 +40,10 @@
 
   <section class="person-list">
     {#each persons as person}
-      <button onclick={() => choosePerson(person.id)}>
+      <button 
+        onclick={() => choosePerson(person.id)}
+        style={chosenPerson?.id === person.id ? '' : `view-transition-name: person-card-${person.id}`}
+        >
         <article>
           {#if person.mugshot}
             <img
