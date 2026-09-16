@@ -110,6 +110,14 @@
         height: 100%;
         flex: none;
       }
+
+      &:hover img {
+        border-radius: 6px;
+
+        @media (min-width:700px) {
+          border-radius: 4px;
+        }
+      }
     }
 
     article {
@@ -124,6 +132,7 @@
         height: 7.125rem;
         object-fit: cover;
         border-radius: 12px;
+        transition: border-radius .2s ease-in-out;
 
         @media (min-width:700px) {
           height: 100%;
