@@ -25,6 +25,10 @@
   }
 </script>
 
+<svelte:head>
+  <title>Squadpage 2G</title>
+</svelte:head>
+
 <div class="squad-layout">
   <section class="detail-page">
     {#if chosenPerson}
