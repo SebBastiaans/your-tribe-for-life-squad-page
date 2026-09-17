@@ -125,6 +125,7 @@
     article {
       position: relative;
       width: 100%;
+      content-visibility: auto;
 
       img {
         display: block;
