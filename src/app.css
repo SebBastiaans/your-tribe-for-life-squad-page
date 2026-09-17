@@ -39,7 +39,9 @@ body {
 
     --margin-inline: clamp(1rem, 0.333rem + 3.333vw, 3rem);
     --radius-small: .25rem;
+    --radius-cards: 12px;
     --radius-round: 999rem;
+    --radius-hover: 6px;
 
     background-color: var(--primary-background-color);
     color: var(--primary-text-color);
@@ -73,6 +75,7 @@ h3 {
 
 :focus-visible{
     outline: 2px solid var(--primary-accent-color);
+    border-radius: var(--radius-cards);
 }
 
 ::view-transition-old(*),

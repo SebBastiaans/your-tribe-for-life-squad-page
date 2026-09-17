@@ -112,11 +112,7 @@
       }
 
       &:hover img {
-        border-radius: 6px;
-
-        @media (min-width:700px) {
-          border-radius: 4px;
-        }
+        border-radius: var(--radius-hover);
       }
     }
 
@@ -131,7 +127,7 @@
         width: 100%;
         height: 7.125rem;
         object-fit: cover;
-        border-radius: 12px;
+        border-radius: var(--radius-cards);
         transition: border-radius .2s ease-in-out;
 
         @media (min-width:700px) {
@@ -167,7 +163,7 @@
           width: 8px;
           height: 8px;
           background-color: var(--primary-accent-color);
-          border-radius: 50%;
+          border-radius: var(--radius-round);
 
           @media (min-width:700px) {
             width: 6px;
