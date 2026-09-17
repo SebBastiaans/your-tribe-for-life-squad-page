@@ -46,10 +46,14 @@
         >
         <article>
           {#if person.mugshot}
+          <picture>
+            <source type="image/avif" srcset="https://fdnd.directus.app/assets/${person.mugshot_year2}?format=avif">
+            <source type="image/webp" srcset="https://fdnd.directus.app/assets/${person.mugshot_year2}?format=webp">
             <img
-              src={`https://fdnd.directus.app/assets/${person.mugshot}`}
+              src={`https://fdnd.directus.app/assets/${person.mugshot_year2}`}
               alt={`Mugshot van ${person.name}`}
             />
+          </picture>
           {:else}
             <img src={shrek} alt="Mugshot van Shrek" />
           {/if}
@@ -117,6 +121,7 @@
     article {
       position: relative;
       width: 100%;
+      content-visibility: auto;
 
       img {
         display: block;
