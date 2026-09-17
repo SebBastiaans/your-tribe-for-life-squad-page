@@ -88,15 +88,13 @@
     gap: 1rem;
     overflow-x: auto;
     scroll-behavior: smooth;
-    padding: 0 1rem 1rem;
+    padding: 1rem 1rem 1rem;
     background-color: var(--primary-background-color);
     border-top: 1px solid var(--secondary-background-color);
-    padding-block-start: 1rem;
 
     > button {
       display: block;
       flex: 0 0 175px;
-      padding: 0;
       border: 0;
       background-color: transparent;
       color: inherit;
@@ -119,8 +117,6 @@
     article {
       position: relative;
       width: 100%;
-
-      margin: 0;
 
       img {
         display: block;
@@ -148,7 +144,7 @@
         padding-inline: 6px;
         background: black;
         border-radius: var(--radius-round);
-        font-size: 14px;
+        font-size: var(--paragraph-small);
 
         @media (min-width:700px) {
           top: 4px;
@@ -174,16 +170,13 @@
 
       h2 {
         position: absolute;
-        right: 0;
-        bottom: 0;
-        left: 0;
+        inset: auto 0 0 0;
         overflow: hidden;
         padding: 2px 4px;
         color: var(--primary-text-color);
         background: rgb(0 0 0 / 70%);
-        /* border-radius: 0 0 12px 12px; */
         font-family: "inter";
-        font-size: 20px;
+        font-size: var(--paragraph-big);
         font-weight: 500;
         text-align: center;
         text-overflow: ellipsis;
@@ -225,9 +218,5 @@
     grid-template-areas: "cards details";
     grid-template-columns: 300px minmax(100px, 1fr);
   }
-
-  /* @media (min-width:800px) {
-    grid-template-columns: 400px minmax(50px, 1fr);
-  } */
 }
 </style>
