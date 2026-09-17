@@ -1,11 +1,11 @@
 <script>
-  import kickVerified from '$lib/assets/kickVerified.svg';
-  import profilePicture from '$lib/assets/profilePicture.webp';
-  import follow from '$lib/assets/follow.svg';
-  import subscribe from '$lib/assets/subscribe.svg';
-  import furkan from '$lib/assets/furkan.webp';
+  import kickVerified from '$lib/assets/kickVerified.svg'
+  import profilePicture from '$lib/assets/profilePicture.webp'
+  import follow from '$lib/assets/follow.svg'
+  import subscribe from '$lib/assets/subscribe.svg'
+  import furkan from '$lib/assets/furkan.webp'
 
-  let { person } = $props();
+  let { person } = $props()
 </script>
 
 <div class="person-detail" style="view-transition-name: person-card-{person.id}">
@@ -21,20 +21,20 @@
         srcset={`https://fdnd.directus.app/assets/${person.mugshot}?width=640&format=webp 640w, https://fdnd.directus.app/assets/${person.mugshot}?width=1440&format=webp 1440w`}
         sizes="100vw"
       >
-      <img class="mugshot" src={`https://fdnd.directus.app/assets/${person.mugshot}?width=1440`} width="1440" height="720" alt={`Mugshot van ${person.name}`}>
+      <img class="mugshot" src={`https://fdnd.directus.app/assets/${person.mugshot}?width=1440`} width="1440" height="720" alt={`Mugshot van ${person.name}`} />
     </picture>
   {:else}
-    <img class="mugshot" src="{profilePicture}" width="1440" height="720" alt="Standaard profielfoto">
+    <img class="mugshot" src={profilePicture} width="1440" height="720" alt="Standaard profielfoto" />
   {/if}
 
   <section aria-label="About {person.name}">
     {#if person.avatar}
       <a class="avatar" href={person.profilecard}>
-        <img src="{person.avatar}" width="48" height="48" loading="lazy" alt="Profielfoto van {person.name}" />
+        <img src={person.avatar} width="48" height="48" loading="lazy" alt="Profielfoto van {person.name}" />
       </a>
     {:else}
       <a class="avatar" href={person.profilecard}>
-        <img class="avatar" src="{furkan}" width="48" height="48" loading="lazy" alt="Standaard profielfoto" />
+        <img src={furkan} width="48" height="48" loading="lazy" alt="Standaard profielfoto" />
       </a>
     {/if}
 
@@ -143,13 +143,15 @@
     picture {
       display: block;
       width: 100%;
-      max-width: 70rem;
     }
 
     .mugshot {
+      display: block;
       width: 100%;
       height: auto;
+      max-width: 70rem;
       max-height: 35rem;
+      margin-inline: auto;
       aspect-ratio: 2 / 1;
       object-fit: cover;
     }
