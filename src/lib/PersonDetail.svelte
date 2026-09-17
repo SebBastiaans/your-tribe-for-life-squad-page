@@ -38,28 +38,12 @@
       </a>
     {/if}
 
-    {#if person.github_handle}
-      <a class="username" href={person.profilecard}>
-        <h2>
-          {person.github_handle}
-          <img src={kickVerified} alt="Verified" />
-        </h2>
-      </a>
-    {:else if person.nickname}
-      <a class="username" href={person.profilecard}>
-        <h2>
-          {person.nickname}
-          <img src={kickVerified} alt="Verified" />
-        </h2>
-      </a>
-    {:else}
-      <a class="username" href={person.profilecard}>
-        <h2>
-          {person.name}
-          <img src={kickVerified} alt="Verified" />
-        </h2>
-      </a>
-    {/if}
+    <a class="username" href={person.profilecard}>
+      <h2>
+        {person.github_handle || person.nickname || person.name}
+        <img src={kickVerified} alt="Verified" />
+      </h2>
+    </a>
 
     <p>{person.fav_game || '-'}</p>
 
@@ -93,22 +77,10 @@
   </section>
 
   <section aria-label="Description by {person.name}">
-    {#if person.github_handle}
-      <h3>
-        About {person.github_handle}
-        <img src={kickVerified} alt="Verified" />
-      </h3>
-    {:else if person.nickname}
-      <h3>
-        About {person.nickname}
-        <img src={kickVerified} alt="Verified" />
-      </h3>
-    {:else}
-      <h3>
-        About {person.name}
-        <img src={kickVerified} alt="Verified" />
-      </h3>
-    {/if}
+    <h3>
+      About {person.github_handle || person.nickname || person.name}
+      <img src={kickVerified} alt="Verified" />
+    </h3>
 
     <p><strong>{person.id}</strong> followers</p>
 
