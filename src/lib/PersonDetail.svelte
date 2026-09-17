@@ -9,19 +9,19 @@
 </script>
 
 <div class="person-detail" style="view-transition-name: person-card-{person.id}">
-  {#if person.mugshot}
+  {#if person.mugshot_year2}
     <picture>
       <source
         type="image/avif"
-        srcset={`https://fdnd.directus.app/assets/${person.mugshot}?width=640&format=avif 640w, https://fdnd.directus.app/assets/${person.mugshot}?width=1440&format=avif 1440w`}
+        srcset={`https://fdnd.directus.app/assets/${person.mugshot_year2}?width=640&format=avif 640w, https://fdnd.directus.app/assets/${person.mugshot_year2}?width=1440&format=avif 1440w`}
         sizes="100vw"
       >
       <source
         type="image/webp"
-        srcset={`https://fdnd.directus.app/assets/${person.mugshot}?width=640&format=webp 640w, https://fdnd.directus.app/assets/${person.mugshot}?width=1440&format=webp 1440w`}
+        srcset={`https://fdnd.directus.app/assets/${person.mugshot_year2}?width=640&format=webp 640w, https://fdnd.directus.app/assets/${person.mugshot_year2}?width=1440&format=webp 1440w`}
         sizes="100vw"
       >
-      <img class="mugshot" src={`https://fdnd.directus.app/assets/${person.mugshot}?width=1440`} width="1440" height="720" alt={`Mugshot van ${person.name}`} />
+      <img class="mugshot" src={`https://fdnd.directus.app/assets/${person.mugshot_year2}?width=1440`} width="1440" height="720" alt={`Mugshot van ${person.name}`} />
     </picture>
   {:else}
     <img class="mugshot" src={profilePicture} width="1440" height="720" alt="Standaard profielfoto" />
