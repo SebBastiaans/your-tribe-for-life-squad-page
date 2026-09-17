@@ -1,57 +1,49 @@
 <script>
-  import kickVerified from '$lib/assets/kickVerified.svg';
-  import profilePicture from '$lib/assets/profilePicture.jpg';
-  import follow from '$lib/assets/follow.svg';
-  import subscribe from '$lib/assets/subscribe.svg';
-  import furkan from '$lib/assets/furkan.png';
+  import kickVerified from '$lib/assets/kickVerified.svg'
+  import profilePicture from '$lib/assets/profilePicture.webp'
+  import follow from '$lib/assets/follow.svg'
+  import subscribe from '$lib/assets/subscribe.svg'
+  import furkan from '$lib/assets/furkan.webp'
 
-  let { person } = $props();
+  let { person } = $props()
 </script>
 
 <div class="person-detail" style="view-transition-name: person-card-{person.id}">
-  {#if person.mugshot}
-    <img
-      class="mugshot"
-      src={`https://fdnd.directus.app/assets/${person.mugshot}`}
-      alt={`Mugshot van ${person.name}`}
-    />
-    {:else}
-      <img class="mugshot" src="{profilePicture}" alt="Standard profile picture">
+  {#if person.mugshot_year2}
+    <picture>
+      <source
+        type="image/avif"
+        srcset={`https://fdnd.directus.app/assets/${person.mugshot_year2}?width=640&format=avif 640w, https://fdnd.directus.app/assets/${person.mugshot_year2}?width=1440&format=avif 1440w`}
+        sizes="100vw"
+      >
+      <source
+        type="image/webp"
+        srcset={`https://fdnd.directus.app/assets/${person.mugshot_year2}?width=640&format=webp 640w, https://fdnd.directus.app/assets/${person.mugshot_year2}?width=1440&format=webp 1440w`}
+        sizes="100vw"
+      >
+      <img class="mugshot" src={`https://fdnd.directus.app/assets/${person.mugshot_year2}?width=1440`} width="1440" height="720" alt={`Mugshot van ${person.name}`} />
+    </picture>
+  {:else}
+    <img class="mugshot" src={profilePicture} width="1440" height="720" alt="Standaard profielfoto" />
   {/if}
 
   <section aria-label="About {person.name}">
     {#if person.avatar}
       <a class="avatar" href={person.profilecard}>
-        <img src="{person.avatar}" alt="Profile picture van {person.name}" />
+        <img src={person.avatar} width="48" height="48" loading="lazy" alt="Profielfoto van {person.name}" />
       </a>
     {:else}
       <a class="avatar" href={person.profilecard}>
-        <img class="avatar" src="{furkan}" alt="Standard profile picture" />
+        <img src={furkan} width="48" height="48" loading="lazy" alt="Standaard profielfoto" />
       </a>
     {/if}
 
-    {#if person.github_handle}
-      <a class="username" href={person.profilecard}>
-        <h2>
-          {person.github_handle}
-          <img src={kickVerified} alt="Verified" />
-        </h2>
-      </a>
-    {:else if person.nickname}
-      <a class="username" href={person.profilecard}>
-        <h2>
-          {person.nickname}
-          <img src={kickVerified} alt="Verified" />
-        </h2>
-      </a>
-    {:else}
-      <a class="username" href={person.profilecard}>
-        <h2>
-          {person.name}
-          <img src={kickVerified} alt="Verified" />
-        </h2>
-      </a>
-    {/if}
+    <a class="username" href={person.profilecard}>
+      <h2>
+        {person.github_handle || person.nickname || person.name}
+        <img src={kickVerified} alt="Verified" />
+      </h2>
+    </a>
 
     <p>{person.fav_game || '-'}</p>
 
@@ -85,22 +77,10 @@
   </section>
 
   <section aria-label="Description by {person.name}">
-    {#if person.github_handle}
-      <h3>
-        About {person.github_handle}
-        <img src={kickVerified} alt="Verified" />
-      </h3>
-    {:else if person.nickname}
-      <h3>
-        About {person.nickname}
-        <img src={kickVerified} alt="Verified" />
-      </h3>
-    {:else}
-      <h3>
-        About {person.name}
-        <img src={kickVerified} alt="Verified" />
-      </h3>
-    {/if}
+    <h3>
+      About {person.github_handle || person.nickname || person.name}
+      <img src={kickVerified} alt="Verified" />
+    </h3>
 
     <p><strong>{person.id}</strong> followers</p>
 
@@ -132,10 +112,19 @@
       padding-bottom: 1rem;
     }
 
-    .mugshot {
+    picture {
+      display: block;
       width: 100%;
-      max-width: 60rem;
+    }
+
+    .mugshot {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 70rem;
       max-height: 35rem;
+      margin-inline: auto;
+      aspect-ratio: 2 / 1;
       object-fit: cover;
     }
 
@@ -169,6 +158,7 @@
 
         img {
           width: 3rem;
+          height: auto;
           aspect-ratio: 1 / 1;
           object-fit: cover;
           border-radius: var(--radius-round);
