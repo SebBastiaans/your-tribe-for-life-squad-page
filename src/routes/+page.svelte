@@ -45,13 +45,16 @@
         style={chosenPerson?.id === person.id ? '' : `view-transition-name: person-card-${person.id}`}
         >
         <article>
-          {#if person.mugshot}
+          {#if person.mugshot_year2}
           <picture>
-            <source type="image/avif" srcset="https://fdnd.directus.app/assets/${person.mugshot_year2}?format=avif">
-            <source type="image/webp" srcset="https://fdnd.directus.app/assets/${person.mugshot_year2}?format=webp">
+            <source type="image/avif" srcset={`https://fdnd.directus.app/assets/${person.mugshot_year2}?format=avif&width=350&height=250&fit=cover&quality=80`}>
+            <source type="image/webp" srcset={`https://fdnd.directus.app/assets/${person.mugshot_year2}?format=webp&width=350&height=250&fit=cover&quality=80`}>
             <img
-              src={`https://fdnd.directus.app/assets/${person.mugshot_year2}`}
+              src={`https://fdnd.directus.app/assets/${person.mugshot_year2}?width=350&height=250&fit=cover&quality=80`}
               alt={`Mugshot van ${person.name}`}
+              width="350"
+              height="250"
+              loading="lazy"
             />
           </picture>
           {:else}
