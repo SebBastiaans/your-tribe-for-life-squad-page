@@ -40,7 +40,7 @@
 
   Emre: Fijn in de omgang, komt met ideeën. Bij remote werken een beetje afwezig. 
   
-  Semih: 
+  Semih: Seb: Goed te bereiken, veel geholpen met het opmaak vvan het project. Emre: Rustige jongen, denk mee aan ideeen.
   
   Seb: Semih: Altijd bereikbaar, enthousiast. Emre: Fijn in de omgang, komt met ideeën. Bij remote werken een beetje afwezig. 
   
@@ -48,7 +48,7 @@
 
   Emre:
   
-  Semih:
+  Semih: Seb: - Emre: Meer tijd besteden aan school
   
   Seb: Semih: Denk eerst goed uit hoe je iets gaat opzetten, voordat je het uitvoert. Emre: Misschien wat meer tijd aan school besteden.
   
@@ -56,7 +56,7 @@
 
   Emre:
   
-  Semih:
+  Semih: Seb: Emre: Meer online aanwezig zijn
   
   Seb: Semih: Meer documenteren. Emre: Meer online aanwezig zijn.
   
@@ -64,6 +64,6 @@
 
   Emre: ik ben trots op onze oplevering. We hebben gebruikgemaakt van een complexere SvelteKit methode volgens Dorien.
   
-  Semih:
+  Semih: Over het algemeen over onze oplevering. Ook tijdens het begrijpen van SvelteKit.
   
   Seb: Ik ben trots op het feit dat we SvelteKit zijn gaan leren kennen, en we regelmatig besproken hebben hoe dit werkt. 
